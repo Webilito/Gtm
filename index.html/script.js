@@ -162,37 +162,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
             
-            // Show thank you message
-            const contactSection = document.getElementById('contact');
-            const contactWrapper = document.querySelector('.contact-wrapper');
-            
-            // Create thank you message
-            const thankYouMessage = document.createElement('div');
-            thankYouMessage.className = 'thank-you-message';
-            thankYouMessage.innerHTML = `
-                <div class="thank-you-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h2>Thank You!</h2>
-                <p>Your message has been sent successfully. We will get back to you shortly.</p>
-                <p class="contact-details">Selected Plan: <strong>${formData.plan}</strong></p>
-                <button class="btn-primary go-back-btn">Go Back</button>
-            `;
-            
-            // Replace form with thank you message
-            contactWrapper.innerHTML = '';
-            contactWrapper.appendChild(thankYouMessage);
-            
-            // Add event listener to the go back button
-            const goBackBtn = document.querySelector('.go-back-btn');
-            if (goBackBtn) {
-                goBackBtn.addEventListener('click', function() {
-                    window.location.reload();
-                });
-            }
-            
-            // Scroll to the thank you message
-            contactSection.scrollIntoView({behavior: 'smooth'});
+            // Redirect to thank you page
+            window.location.href = 'thank-you.html';
         });
     }
 
