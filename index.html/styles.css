@@ -842,53 +842,103 @@ nav ul li a.active::after {
     resize: none;
 }
 
-/* Thank You Message */
-.thank-you-message {
+/* Thank You Page Styles */
+.thank-you-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background-color: var(--light-color);
+}
+
+.thank-you-content {
     text-align: center;
     background-color: white;
-    padding: 40px;
-    border-radius: 10px;
+    padding: 50px;
+    border-radius: 15px;
     box-shadow: var(--box-shadow);
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .thank-you-icon {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-color: rgba(76, 175, 80, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
+    animation: scale-in 0.5s ease-out;
 }
 
 .thank-you-icon i {
-    font-size: 40px;
+    font-size: 50px;
     color: var(--success-color);
 }
 
-.thank-you-message h2 {
-    margin-bottom: 15px;
+.thank-you-content h1 {
+    font-size: 2.5rem;
     color: var(--primary-color);
+    margin-bottom: 20px;
+    animation: fade-in 0.5s ease-out;
 }
 
-.thank-you-message p {
-    margin-bottom: 20px;
+.thank-you-content p {
     color: var(--gray-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    animation: fade-in 0.5s ease-out 0.2s backwards;
 }
 
-.contact-details {
+.thank-you-details {
     background-color: rgba(67, 97, 238, 0.05);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 0;
+    animation: fade-in 0.5s ease-out 0.4s backwards;
 }
 
-.go-back-btn {
-    display: inline-block;
-    margin-top: 10px;
+.thank-you-details p {
+    margin-bottom: 10px;
+}
+
+.thank-you-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    animation: fade-in 0.5s ease-out 0.6s backwards;
+}
+
+.thank-you-buttons .btn-primary,
+.thank-you-buttons .btn-secondary {
+    min-width: 200px;
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* WhatsApp Button */
